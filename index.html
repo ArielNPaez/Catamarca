@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversión en Catamarca - Oportunidades Únicas</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans bg-gray-900 text-white">
+
+    <!-- Video de fondo y superposición para el efecto de entrada -->
+    <video autoplay loop muted playsinline poster="assets/videos/catamarca-catedral.webm" id="video-background">
+        <!--
+            IMPORTANTE: Reemplaza este video por uno de un paisaje de Catamarca.
+            Esto es un video de stock solo para demostración.
+        -->
+        <source src="assets/videos/catamarca-catedral.webm" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+    <div id="video-overlay"></div>
+
+    <!-- Sección de presentación inicial -->
+    <div id="intro-screen" class="relative min-h-screen flex items-center justify-center text-center px-4 z-10 transition-opacity duration-1000">
+        <div>
+            <h1 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
+                Catamarca: El Futuro de tu Próxima Inversión
+            </h1>
+            <p class="text-lg md:text-2xl font-light mt-4 drop-shadow-md max-w-2xl mx-auto">
+                Capitaliza un crecimiento sin precedentes y sé parte de la transformación económica de una provincia.
+            </p>
+            <button id="enter-button" class="mt-10 px-8 py-4 bg-secondary text-primary font-bold text-lg rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 bounce-animation">
+                Explorar Ahora
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal que aparece después de la introducción -->
+    <main id="main-content" class="hidden relative z-20 min-h-screen bg-transparent pt-24 pb-12">
+        <!-- Sección de Oportunidades -->
+        <section class="container mx-auto px-4 py-8 md:py-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
+                Un Ecosistema en Expansión
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un edificio -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Infraestructura & Hotelería</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Necesidades críticas para la creciente fuerza laboral y ejecutivos del sector.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un camión -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 20L10 18M14 20L14 18M2 13L22 13M4 11L4 16C4 17.6569 5.34315 19 7 19H17C18.6569 19 20 17.6569 20 16V11L18 8L16 8L14 8L12 8L10 8L8 8L6 8L4 11ZM6 8V6H8V8M16 8V6H18V8M10 8V6H14V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Logística & Transporte</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Desarrollo de soluciones de movilidad para el dinamismo económico de la región.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un negocio -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Servicios & Consumo</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Un mercado en crecimiento que demanda bienes y servicios de todo tipo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Propuesta de Valor (Agregada) -->
+        <section class="container mx-auto px-4 py-8 md:py-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
+                Nuestro Valor Agregado: Tu Socio Estratégico
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un grupo de personas -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 21V19C16 17.3431 14.6569 16 13 16H8C6.34315 16 5 17.3431 5 19V21M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Grupo de Expertos</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Equipo multidisciplinario de abogados, desarrolladores de negocios y especialistas.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un documento -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Apoyo Gubernamental</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Acceso a beneficios fiscales y apoyo en los costos de mano de obra local.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un barco y un camión -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22L12 18M12 18L2 14L2 8L12 2L22 8L22 14L12 18ZM12 18V22M2 14L22 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Logística Estratégica</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Importaciones a costos reducidos y con logística eficiente a través de puertos de alto nivel.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
+                    <!-- Icono SVG de un contrato -->
+                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12V2C22 1.46957 21.7893 0.960859 21.4142 0.585786C21.0391 0.210714 20.5304 0 20 0H4C3.46957 0 2.96086 0.210714 2.58579 0.585786C2.21071 0.960859 2 1.46957 2 2V22C2 22.5304 2.21071 23.0391 2.58579 23.4142C2.96086 23.7893 3.46957 24 4 24H20C20.5304 24 21.0391 23.7893 21.4142 23.4142C21.7893 23.0391 22 22.5304 22 22V12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Camino a la Proveeduría</h3>
+                    <p class="text-gray-300 text-sm md:text-base">Te ayudamos a convertirte en proveedor del sector minero, asegurando contratos a largo plazo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Cifras Clave -->
+        <section class="container mx-auto px-4 py-8 md:py-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
+                El Impacto de tu Inversión
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center fade-in">
+                <div>
+                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="700">0</div>
+                    <p class="text-lg text-gray-200 mt-2">Trabajadores actuales</p>
+                </div>
+                <div>
+                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="3">0</div>
+                    <p class="text-lg text-gray-200 mt-2">Crecimiento proyectado</p>
+                </div>
+                <div>
+                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="4">0</div>
+                    <p class="text-lg text-gray-200 mt-2">Sectores de oportunidad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto con efecto glass-card -->
+        <section class="container mx-auto px-4 py-8 md:py-16 text-center">
+            <div class="glass-card p-8 md:p-12 max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">El Futuro Comienza Aquí</h2>
+                <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+                    Solicita una reunion exclusiva y descubre cómo tu capital puede formar parte de la historia de Catamarca.
+                </p>
+                <a href="mailto:mercedespaeztt@gmail.com" class="inline-block px-10 py-4 bg-accent text-white font-bold text-lg rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300">
+                    Contáctanos Ahora
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="relative z-20 text-center py-8 bg-gray-900 text-gray-400">
+        <p>&copy; 2025. Todos los derechos reservados.</p>
+    </footer>
+
+        <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
