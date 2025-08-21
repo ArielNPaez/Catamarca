@@ -3,141 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inversión en Catamarca - Oportunidades Únicas</title>
+    <title>Oportunidad de Inversión - Catamarca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="font-sans bg-gray-900 text-white">
-
-    <!-- Video de fondo y superposición para el efecto de entrada -->
-    <video autoplay loop muted playsinline poster="assets/videos/catamarca-catedral.webm" id="video-background">
-        <!--
-            IMPORTANTE: Reemplaza este video por uno de un paisaje de Catamarca.
-            Esto es un video de stock solo para demostración.
-        -->
-        <source src="assets/videos/catamarca-catedral.webm" type="video/mp4">
-        Tu navegador no soporta el video.
-    </video>
-    <div id="video-overlay"></div>
-
-    <!-- Sección de presentación inicial -->
-    <div id="intro-screen" class="relative min-h-screen flex items-center justify-center text-center px-4 z-10 transition-opacity duration-1000">
-        <div>
-            <h1 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
-                Catamarca: El Futuro de tu Próxima Inversión
-            </h1>
-            <p class="text-lg md:text-2xl font-light mt-4 drop-shadow-md max-w-2xl mx-auto">
-                Capitaliza un crecimiento sin precedentes y sé parte de la transformación económica de una provincia.
-            </p>
-            <button id="enter-button" class="mt-10 px-8 py-4 bg-secondary text-primary font-bold text-lg rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 bounce-animation">
-                Explorar Ahora
-            </button>
-        </div>
-    </div>
-
-    <!-- Contenido principal que aparece después de la introducción -->
-    <main id="main-content" class="hidden relative z-20 min-h-screen bg-transparent pt-24 pb-12">
-        <!-- Sección de Oportunidades -->
-        <section class="container mx-auto px-4 py-8 md:py-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
-                Un Ecosistema en Expansión
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un edificio -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Infraestructura & Hotelería</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Necesidades críticas para la creciente fuerza laboral y ejecutivos del sector.</p>
-                </div>
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un camión -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 20L10 18M14 20L14 18M2 13L22 13M4 11L4 16C4 17.6569 5.34315 19 7 19H17C18.6569 19 20 17.6569 20 16V11L18 8L16 8L14 8L12 8L10 8L8 8L6 8L4 11ZM6 8V6H8V8M16 8V6H18V8M10 8V6H14V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Logística & Transporte</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Desarrollo de soluciones de movilidad para el dinamismo económico de la región.</p>
-                </div>
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un negocio -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Servicios & Consumo</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Un mercado en crecimiento que demanda bienes y servicios de todo tipo.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Propuesta de Valor (Agregada) -->
-        <section class="container mx-auto px-4 py-8 md:py-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
-                Nuestro Valor Agregado: Tu Socio Estratégico
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un grupo de personas -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 21V19C16 17.3431 14.6569 16 13 16H8C6.34315 16 5 17.3431 5 19V21M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Grupo de Expertos</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Equipo multidisciplinario de abogados, desarrolladores de negocios y especialistas.</p>
-                </div>
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un documento -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L12 22M2 10L22 10M6 2L6 22M18 2L18 22M2 18L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Apoyo Gubernamental</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Acceso a beneficios fiscales y apoyo en los costos de mano de obra local.</p>
-                </div>
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un barco y un camión -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22L12 18M12 18L2 14L2 8L12 2L22 8L22 14L12 18ZM12 18V22M2 14L22 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Logística Estratégica</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Importaciones a costos reducidos y con logística eficiente a través de puertos de alto nivel.</p>
-                </div>
-                <div class="glass-card p-6 md:p-8 flex flex-col items-center text-center fade-in">
-                    <!-- Icono SVG de un contrato -->
-                    <svg class="w-16 h-16 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12V2C22 1.46957 21.7893 0.960859 21.4142 0.585786C21.0391 0.210714 20.5304 0 20 0H4C3.46957 0 2.96086 0.210714 2.58579 0.585786C2.21071 0.960859 2 1.46957 2 2V22C2 22.5304 2.21071 23.0391 2.58579 23.4142C2.96086 23.7893 3.46957 24 4 24H20C20.5304 24 21.0391 23.7893 21.4142 23.4142C21.7893 23.0391 22 22.5304 22 22V12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-2">Camino a la Proveeduría</h3>
-                    <p class="text-gray-300 text-sm md:text-base">Te ayudamos a convertirte en proveedor del sector minero, asegurando contratos a largo plazo.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Cifras Clave -->
-        <section class="container mx-auto px-4 py-8 md:py-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 fade-in">
-                El Impacto de tu Inversión
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center fade-in">
-                <div>
-                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="700">0</div>
-                    <p class="text-lg text-gray-200 mt-2">Trabajadores actuales</p>
-                </div>
-                <div>
-                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="3">0</div>
-                    <p class="text-lg text-gray-200 mt-2">Crecimiento proyectado</p>
-                </div>
-                <div>
-                    <div class="text-6xl md:text-7xl font-extrabold text-secondary counter-number" data-target="4">0</div>
-                    <p class="text-lg text-gray-200 mt-2">Sectores de oportunidad</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Contacto con efecto glass-card -->
-        <section class="container mx-auto px-4 py-8 md:py-16 text-center">
-            <div class="glass-card p-8 md:p-12 max-w-4xl mx-auto text-center fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">El Futuro Comienza Aquí</h2>
-                <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-                    Solicita una reunion exclusiva y descubre cómo tu capital puede formar parte de la historia de Catamarca.
+<body class="bg-gray-50">
+    <!-- Video Hero Section -->
+    <section class="video-container">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-1">
+            <source src="assets/videos/catamarca-catedral.webm" type="video/mp4">
+            <!-- Fallback background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900"></div>
+        </video>
+        
+        <div class="video-content">
+            <div class="fade-in-up animate">
+                <h1 class="main-title mb-4">
+                    Oportunidad de Inversión
+                </h1>
+                <p class="subtitle">
+                    Descubre el potencial de Catamarca
                 </p>
-                <a href="mailto:mercedespaeztt@gmail.com" class="inline-block px-10 py-4 bg-accent text-white font-bold text-lg rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300">
-                    Contáctanos Ahora
-                </a>
+                <div class="mt-8">
+                    <a href="https://wa.me/+5493815123858?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20las%20oportunidades%20de%20inversión%20en%20Catamarca.%20¿Podrían%20brindarme%20información%20exclusiva%20sobre%20los%20proyectos%20disponibles?" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                        Explorar Oportunidades
+                    </a>
+                </div>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+
+    <!-- Main Hero Section -->
+    <section class="morphing-bg text-white py-20 relative">
+        <div class="floating-elements"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl font-black mb-6 fade-in-up animate stagger-1 text-shadow-strong">
+                Desarrollo Estratégico en Catamarca
+            </h2>
+            <div class="glass-effect rounded-xl p-8 max-w-4xl mx-auto fade-in-up animate stagger-2 premium-border hover-lift">
+                <p class="text-xl leading-relaxed">
+                    Únete al <span class="font-bold text-yellow-300">crecimiento económico más importante</span> de Argentina. 
+                    Catamarca está experimentando una <span class="font-bold text-yellow-300">transformación sin precedentes</span>.
+                </p>
+            </div>
+            
+            <!-- Floating Stats -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12 fade-in-up animate stagger-3">
+                <div class="glass-effect rounded-lg p-6 hover-lift">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">700+</div>
+                    <div class="text-sm text-blue-100">Empleos Actuales</div>
+                </div>
+                <div class="glass-effect rounded-lg p-6 hover-lift">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">3x</div>
+                    <div class="text-sm text-blue-100">Crecimiento Proyectado</div>
+                </div>
+                <div class="glass-effect rounded-lg p-6 hover-lift">
+                    <div class="text-3xl font-bold text-yellow-300 mb-2">∞</div>
+                    <div class="text-sm text-blue-100">Oportunidades (Infinitas)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-5xl font-black text-gray-800 mb-6">
+                    UN CRECIMIENTO SIN PRECEDENTES
+                </h2>
+                <div class="w-32 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up stagger-1">
+                    <div class="premium-border bg-gradient-to-br from-blue-50 to-purple-50 p-10 rounded-2xl card-hover">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-8 flex items-center">
+                            <span class="text-4xl mr-4">⛏️</span>
+                            Expansión del Sector Minero
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold mr-6 text-lg relative z-10">
+                                    700
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-800 font-semibold text-lg">Empleados actuales en minería</span>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                                        <div class="bg-green-500 h-2 rounded-full w-1/3 transition-all duration-1000 group-hover:w-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold mr-6 text-lg relative z-10">
+                                    3x
+                                </div>
+                                <div class="flex-1">
+                                    <span class="text-gray-800 font-semibold text-lg">Crecimiento proyectado de empleos</span>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                                        <div class="bg-blue-500 h-2 rounded-full w-2/3 transition-all duration-1000 group-hover:w-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-lg text-gray-700 leading-relaxed fade-in-up stagger-2">
+                    <div class="space-y-8">
+                        <div class="glass-effect p-6 rounded-xl hover-lift">
+                            <p class="mb-6 text-xl">
+                                Catamarca está experimentando una <span class="font-bold text-blue-600 bg-blue-100 px-2 py-1 rounded">expansión económica masiva</span> impulsada por el sector minero. 
+                                Las principales empresas del rubro proyectan duplicar y triplicar su fuerza laboral en los próximos años. Mas con el corredor bioceanico, que unira los principales paises de America
+                            </p>
+                        </div>
+                        
+                        <div class="premium-border bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl hover-lift">
+                            <div class="flex items-start">
+                                <div class="text-3xl mr-4">⚠️</div>
+                                <div>
+                                    <h4 class="font-bold text-red-700 text-xl mb-3">Oportunidad Crítica</h4>
+                                    <p class="text-red-600 font-semibold text-lg">
+                                        Este crecimiento exponencial está generando una <span class="underline">brecha significativa</span> en la oferta de servicios e infraestructura. 
+                                        La provincia no está preparada para satisfacer la creciente demanda.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+            <div class="absolute top-20 left-20 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-6xl font-black mb-6 text-shadow-strong">
+                    NUESTRA MISIÓN
+                </h2>
+                <p class="text-2xl text-purple-100 font-light">Transformar Desafíos en Negocios Rentables</p>
+                <div class="w-32 h-2 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto mt-6 rounded-full"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto mb-16 fade-in-up stagger-1">
+                <div class="glass-effect p-8 rounded-2xl premium-border hover-lift">
+                    <p class="text-xl text-center leading-relaxed">
+                        En colaboracion con <span class="font-bold text-yellow-300 bg-yellow-300/20 px-3 py-1 rounded-full">Entidades clave</span>, 
+                        hemos identificado un abanico de oportunidades de negocio para cubrir las necesidades que surgen con esta 
+                        <span class="font-bold text-orange-300">urbanización acelerada</span>.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect p-10 rounded-2xl card-hover premium-glow fade-in-up stagger-1 group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🏨</div>
+                    <h3 class="text-2xl font-bold mb-6 text-yellow-300">Hotelería y Gastronomía</h3>
+                    <p class="text-purple-100 text-lg leading-relaxed">
+                        Establecimientos de <span class="font-semibold text-white">alta calidad</span> para satisfacer las necesidades de gerentes y personal de alto rango.
+                    </p>
+                    <div class="mt-6 flex items-center text-yellow-300">
+                        <span class="text-sm font-semibold">ALTA DEMANDA</span>
+                        <div class="ml-2 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-10 rounded-2xl card-hover premium-glow fade-in-up stagger-2 group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🚛</div>
+                    <h3 class="text-2xl font-bold mb-6 text-yellow-300">Transporte</h3>
+                    <p class="text-purple-100 text-lg leading-relaxed">
+                        Soluciones de <span class="font-semibold text-white">movilidad innovadoras</span> para el personal de las mineras y la población en general.
+                    </p>
+                    <div class="mt-6 flex items-center text-yellow-300">
+                        <span class="text-sm font-semibold">CRECIMIENTO EXPONENCIAL</span>
+                        <div class="ml-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-10 rounded-2xl card-hover premium-glow fade-in-up stagger-3 group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">🏪</div>
+                    <h3 class="text-2xl font-bold mb-6 text-yellow-300">Comercio y Servicios</h3>
+                    <p class="text-purple-100 text-lg leading-relaxed">
+                        Tiendas, centros de entretenimiento y <span class="font-semibold text-white">servicios esenciales</span> para una población en crecimiento.
+                    </p>
+                    <div class="mt-6 flex items-center text-yellow-300">
+                        <span class="text-sm font-semibold">MERCADO VIRGEN</span>
+                        <div class="ml-2 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Invest Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">POR QUÉ INVERTIR CON NOSOTROS</h2>
+                <p class="text-xl text-gray-600">Acompañamiento integral para maximizar tu éxito y minimizar los riesgos</p>
+                <div class="w-24 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Benefit 1 -->
+                <div class="flex items-start space-x-6">
+                    <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        1
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Respaldo Profesional y Estratégico</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Somos un equipo multidisciplinario de expertos en <strong>derecho, desarrollo de negocios y marketing</strong>. 
+                            Nos integramos a tu proyecto para brindarte la estructura y el conocimiento que necesitas para crecer.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="flex items-start space-x-6">
+                    <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        2
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Ventajas Competitivas Únicas</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            como parte <strong>de nuestra alianza</strong>, podemos ofrecerte beneficios exclusivos:
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg hover-lift">
+                                <div class="text-2xl mb-2">💰</div>
+                                <h4 class="font-semibold text-green-800">Incentivos Fiscales</h4>
+                                <p class="text-sm text-green-700">Reducción de la carga impositiva</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg hover-lift">
+                                <div class="text-2xl mb-2">👥</div>
+                                <h4 class="font-semibold text-blue-800">Apoyo a la Mano de Obra</h4>
+                                <p class="text-sm text-blue-700">Subsidios para salarios del personal local</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg hover-lift">
+                                <div class="text-2xl mb-2">🏦</div>
+                                <h4 class="font-semibold text-purple-800">Acceso a Financiamiento</h4>
+                                <p class="text-sm text-purple-700">Líneas de crédito con tasas preferenciales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="flex items-start space-x-6">
+                    <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        3
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Logística de Bajo Costo</h3>
+                        <div class="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl hover-lift">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-3">🌊 Corredor Bioceánico</h4>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Catamarca ha logrado un hito con la apertura del <strong>Corredor Bioceánico</strong>, 
+                                una ruta estratégica que te permite <strong>importar bienes a precios significativamente más bajos</strong>. 
+                                Este corredor, con acceso a un puerto en Chile mejor calado, 
+                                facilita la entrada de cualquier tipo de embarcación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="flex items-start space-x-6">
+                    <div class="number-circle w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        4
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Oportunidad de Convertirte en Proveedor Minero</h3>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl hover-lift">
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Una vez que tu negocio esté establecido y funcionando <strong>(aproximadamente 18 meses)</strong>, 
+                                te ayudaremos a postular para convertirte en proveedor de las mineras. 
+                                Este paso te abrirá la puerta a <strong>contratos a largo plazo</strong> y a un mercado de alto valor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="morphing-bg text-white py-24 relative overflow-hidden">
+        <div class="floating-elements"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="fade-in-up">
+                <h2 class="text-6xl font-black mb-8 text-shadow-strong">
+                    Tu Futuro Comienza Aquí
+                </h2>
+            </div>
+            
+            <div class="max-w-5xl mx-auto mb-16 fade-in-up stagger-1">
+                <div class="glass-effect p-10 rounded-2xl premium-border hover-lift mb-8">
+                    <p class="text-2xl leading-relaxed mb-8">
+                        Este es el momento decisivo para capitalizar el potencial de crecimiento de Catamarca. Invertir ahora te posiciona en el <span class="font-bold text-yellow-300 bg-yellow-300/20 px-3 py-1 rounded-full">epicentro</span>  de un desarrollo sin precedentes, asegurando una <span class="font-bold text-yellow-300 bg-yellow-300/20 px-3 py-1 rounded-full">rentabilidad sólida</span>  y un <span class="font-bold text-yellow-300 bg-yellow-300/20 px-3 py-1 rounded-full">lugar de privilegio</span>  en el futuro económico de la provincia
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-12 max-w-3xl mx-auto mb-12 premium-border fade-in-up stagger-2">
+                <h3 class="text-3xl font-bold mb-8 text-yellow-300">¿Estás listo para formar parte de este crecimiento?</h3>
+                
+                <div class="relative inline-block">
+                    <a href="https://wa.me/+5493815123858?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20las%20oportunidades%20de%20inversión%20en%20Catamarca.%20¿Podrían%20brindarme%20información%20exclusiva%20sobre%20los%20proyectos%20disponibles?" target="_blank" class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-black py-6 px-12 rounded-2xl text-2xl transition-all duration-500 transform hover:scale-110 pulse-animation shadow-2xl relative overflow-hidden group">
+                        <span class="relative z-10">💎 Solicitar Información Exclusiva</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="relative z-20 text-center py-8 bg-gray-900 text-gray-400">
-        <p>&copy; 2025. Todos los derechos reservados.</p>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                © 2024 Desarrollo Estratégico Catamarca. Una oportunidad de inversión única.
+            </p>
+        </div>
     </footer>
 
-        <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/script.js"></script>
 </body>
 </html>
